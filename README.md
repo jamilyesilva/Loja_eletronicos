@@ -1,7 +1,7 @@
 🛒 EletroSys
 Sistema de Loja Virtual de Eletrônicos
 
-O EletroSys é um sistema web de loja virtual desenvolvido com PHP e MySQL, que simula o funcionamento completo de um e-commerce.
+O EletroSys é um sistema web de loja virtual desenvolvido com PHP e MySQL, que simula parte do funcionamento base de um e-commerce.
 O projeto foi criado com foco em aprendizado prático, organização de código, segurança e lógica de negócio, contemplando diferentes tipos de usuários e fluxos reais de uma aplicação web.
 
 🎯 Objetivo do Projeto
