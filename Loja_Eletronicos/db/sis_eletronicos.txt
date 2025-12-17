@@ -1,0 +1,46 @@
+CREATE DATABASE Sis_eletronica;
+USE Sis_eletronica;
+
+CREATE TABLE usuarios(
+	cod_user INT AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(30) NOT NULL,
+	pass VARCHAR(255) NOT NULL,
+	email VARCHAR(30) NOT NULL UNIQUE,
+	data_nascimento DATE,
+	type_user ENUM('user', 'admin') NOT NULL DEFAULT 'user'
+);
+
+CREATE TABLE products(
+	cod_product INT AUTO_INCREMENT PRIMARY KEY,
+	p_name VARCHAR(20) NOT NULL,
+	valor INT NOT NULL,
+	quant INT NOT NULL,
+	description VARCHAR(30) NOT NULL,
+	image VARCHAR(255) DEFAULT NOT NULL
+);
+
+CREATE TABLE pedido(
+	cod_pedido INT AUTO_INCREMENT PRIMARY KEY,
+	num_pedido VARCHAR(20) UNIQUE,
+	cod_user INT,
+	data_pedido DATETIME NOT NULL,
+	FOREIGN KEY (cod_user) REFERENCES user(cod_user)	
+);
+
+CREATE TABLE itens_pedido(
+	cod_item INT AUTO_INCREMENT PRIMARY KEY;
+	cod_pedido INT NOT NULL,
+    cod_product INT NOT NULL,
+    quantidade INT NOT NULL,
+    preco_unitario INT NOT NULL,
+    FOREIGN KEY (cod_pedido) REFERENCES pedido(cod_pedido),
+    FOREIGN KEY (cod_product) REFERENCES products(cod_product)
+);
+
+CREATE TABLE chamado(
+	cod_chamado INT AUTO_INCREMENT PRIMARY KEY,
+	problem TEXT,
+	data_abertura DATETIME NOT NULL,
+	cod_pedido INT NOT NULL,	
+	FOREIGN KEY (cod_pedido) REFERENCES pedido(cod_pedido)
+);

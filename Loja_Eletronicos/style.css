@@ -1,0 +1,110 @@
+
+body {
+    background: linear-gradient(135deg, #f3f4f5, #57606b);
+    min-height: 100vh
+}
+
+.page-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.page-produtos {
+  display: block;
+  min-height: 100vh;
+}
+
+fieldset {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #dee2e6;
+    width: 100%;
+    max-width: 420px;
+}
+
+legend {
+    font-size: 1.6rem;
+    font-weight: 800;
+    padding: 0 10px;
+    width: auto;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.image-upload-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  box-shadow: 3px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f7f7;
+}
+
+.image-upload-box input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.image-upload-box img.img-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: none;
+  z-index: 1;
+}
+
+.image-upload-box span {
+  color: #555;
+  font-size: 0.9rem;
+  z-index: 2;
+  pointer-events: none; /* label não bloqueia o clique */
+}
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+
+
+.navbar.fixed-top {
+  z-index: 1050;
+}
+
+.navbar-spacer {
+  height: 56px;
+}
+
+.navbar .dropdown-menu {
+  z-index: 2050;
+}
+
+.navbar .admin-menu-btn {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0;
+  background: transparent;
+}
+
+.navbar .admin-menu-btn .bi {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+
